@@ -3,14 +3,15 @@ package com.job.service;
 import com.job.entities.Job;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface jobService {
 
-    Job getJobFromId(Long id);
+    Optional<Job> getJobFromId(Long id);
 
     List<Job> getAllJobs();
 
-    String remJobFromId(Long id);
+    void remJobFromId(Long id);
 
-    String makeJob(Job job);
+    Job makeJob(Job job);
 }
