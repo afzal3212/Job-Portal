@@ -4,9 +4,13 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table
+@Getter
+@Setter
 public class Job {
 	
 	@Id
@@ -17,45 +21,31 @@ public class Job {
 	private String city;
 	@Column
 	private String companyName;
-	public Job(Long jobId, String jobName, String city, String companyName) {
-		super();
-		this.jobId = jobId;
-		this.jobName = jobName;
-		this.city = city;
-		this.companyName = companyName;
-	}
+	@Column
+	private Boolean WorkFromHome;
+	@Column
+	private Long vacantPos;
+
 	public Job() {
-		super();
 	}
-	public Long getJobId() {
-		return jobId;
-	}
-	public void setJobId(Long jobId) {
-		this.jobId = jobId;
-	}
-	public String getJobName() {
-		return jobName;
-	}
-	public void setJobName(String jobName) {
+
+	public Job(String jobName, String companyName, String city, Boolean workFromHome, Long vacantPos) {
 		this.jobName = jobName;
-	}
-	public String getCity() {
-		return city;
-	}
-	public void setCity(String city) {
-		this.city = city;
-	}
-	public String getCompanyName() {
-		return companyName;
-	}
-	public void setCompanyName(String companyName) {
 		this.companyName = companyName;
+		this.city = city;
+		WorkFromHome = workFromHome;
+		this.vacantPos = vacantPos;
 	}
+
 	@Override
 	public String toString() {
-		return "Job [jobId=" + jobId + ", jobName=" + jobName + ", city=" + city + ", companyName=" + companyName + "]";
+		return "Job{" +
+				"jobId=" + jobId +
+				", jobName='" + jobName + '\'' +
+				", city='" + city + '\'' +
+				", companyName='" + companyName + '\'' +
+				", WorkFromHome=" + WorkFromHome +
+				", vacantPos=" + vacantPos +
+				'}';
 	}
-	
-	
-
 }
