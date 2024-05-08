@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Job {
 	
 	@Id
-	private Long jobId;
+	private long jobId;
 	@Column
 	private String jobName;
 	@Column
@@ -22,9 +22,9 @@ public class Job {
 	@Column
 	private String companyName;
 	@Column
-	private Boolean WorkFromHome;
+	private boolean WorkFromHome;
 	@Column
-	private Long vacantPos;
+	private long vacantPos;
 
 	public Job() {
 	}
