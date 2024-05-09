@@ -29,7 +29,7 @@ public class Job {
 	public Job() {
 	}
 
-	public Job(String jobName, String companyName, String city, Boolean workFromHome, Long vacantPos) {
+	public Job(String jobName, String companyName, String city, boolean workFromHome, long vacantPos) {
 		this.jobName = jobName;
 		this.companyName = companyName;
 		this.city = city;
