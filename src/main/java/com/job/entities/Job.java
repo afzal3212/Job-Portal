@@ -14,16 +14,17 @@ import lombok.Setter;
 public class Job {
 	
 	@Id
+	@Column(name="job_id")
 	private long jobId;
-	@Column
+	@Column(name="job_name")
 	private String jobName;
-	@Column
+	@Column(name="city")
 	private String city;
-	@Column
+	@Column(comp_name)
 	private String companyName;
-	@Column
+	@Column(name="wfh")
 	private boolean WorkFromHome;
-	@Column
+	@Column(name="vacant")
 	private long vacantPos;
 
 	public Job() {
